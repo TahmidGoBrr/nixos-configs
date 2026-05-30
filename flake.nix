@@ -12,6 +12,9 @@
 			};
 		};
 	};
+	helium = {
+		url = "github:amaanq/helium-flake";
+	};
 	nixcord = {
 		url = "github:FlameFlag/nixcord";
 	};
@@ -23,6 +26,7 @@
 			modules = [
 				./configuration.nix
 				home-manager.nixosModules.home-manager
+				helium.nixosModules.helium
 				{
 					home-manager = {
 						useGlobalPkgs = true;
@@ -40,10 +44,10 @@
 						};
 						backupFileExtension = "backup";
 					};
-					}
-				];
-			};
+				}
+			];
 		};
 	};
+  };
 }
 
